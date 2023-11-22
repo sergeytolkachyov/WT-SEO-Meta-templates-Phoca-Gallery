@@ -1,29 +1,30 @@
 <?xml version="1.0"?>
-<extension type="plugin" version="4.0" method="upgrade" group="system">
+<extension type="plugin" method="upgrade" group="system">
     <name>System - WT SEO Meta templates - Phoca Gallery</name>
     <author>Sergey Tolkachyov</author>
     <authorEmail>info@web-tolk.ru</authorEmail>
     <authorUrl>https://web-tolk.ru/</authorUrl>
-	<creationDate>02/02/2022</creationDate>
+	<creationDate>November 2023</creationDate>
     <copyright>Sergey Tolkachyov</copyright>
     <license>GNU General Public License v3.0</license>
-    <version>1.0.0</version>
+    <version>2.0.0</version>
     <description>Phoca Gallery plugin for WT SEO Meta templates</description>
+    <namespace path="src">Joomla\Plugin\System\Wt_seo_meta_templates_phoca_gallery</namespace>
     <files>
-        <filename plugin="wt_seo_meta_templates_phoca_gallery">wt_seo_meta_templates_phoca_gallery.php</filename>
-        <folder>language</folder>
-        <folder>fields</folder>
+        <folder plugin="wt_seo_meta_templates_phoca_gallery">src</folder>
+        <folder>services</folder>
+        <filename>wt_seo_meta_templates_phoca_gallery.xml</filename>
     </files>
 	<languages folder="language" client="administrator">
-        <language tag="en-GB">en-GB/en-GB.plg_system_wt_seo_meta_templates_phoca_gallery.ini</language>
-        <language tag="ru-RU">ru-RU/ru-RU.plg_system_wt_seo_meta_templates_phoca_gallery.ini</language>
-        <language tag="en-GB">en-GB/en-GB.plg_system_wt_seo_meta_templates_phoca_gallery.sys.ini</language>
-        <language tag="ru-RU">ru-RU/ru-RU.plg_system_wt_seo_meta_templates_phoca_gallery.sys.ini</language>
+        <language tag="en-GB">en-GB/plg_system_wt_seo_meta_templates_phoca_gallery.ini</language>
+        <language tag="ru-RU">ru-RU/plg_system_wt_seo_meta_templates_phoca_gallery.ini</language>
+        <language tag="en-GB">en-GB/plg_system_wt_seo_meta_templates_phoca_gallery.sys.ini</language>
+        <language tag="ru-RU">ru-RU/plg_system_wt_seo_meta_templates_phoca_gallery.sys.ini</language>
     </languages>
        <config>
         <fields name="params">
             <fieldset name="basic">
-                <field addfieldpath="plugins/system/wt_seo_meta_templates_phoca_gallery/fields" type="plugininfo" name="plugininfo"/>
+                <field addfieldprefix="Joomla\Plugin\System\Wt_seo_meta_templates_phoca_gallery\Fields" type="plugininfo" name="plugininfo"/>
                 <field type="note" label="PLG_WT_SEO_META_TEMPLATES_PHOCA_GALLERY_DESCRIPTION_WTF" description="PLG_WT_SEO_META_TEMPLATES_PHOCA_GALLERY_DESCRIPTION" class="alert alert-info"/>
                 <field type="spacer" label="PLG_WT_SEO_META_TEMPLATES_PHOCA_GALLERY_SHOW_DEBUG_HEADER"/>
                 <field type="radio"
@@ -127,7 +128,8 @@
 
         </fields>
     </config>
-	<updateservers>
-        <server type="extension" name="WebTolk - WT SEO Meta templates - Phoca Gallery">https://web-tolk.ru/component/swjprojects/jupdate.html?element=wt_seo_meta_templates_phoca_gallery</server>
+    <updateservers>
+        <server type="extension" priority="1" name="WT SEO Meta templates - Phoca Gallery updates">https://web-tolk.ru/component/swjprojects/jupdate?element=wt_seo_meta_templates_phoca_gallery</server>
     </updateservers>
+    <changelogurl>https://web-tolk.ru/jchangelog?element=wt_seo_meta_templates_phoca_gallery</changelogurl>
 </extension>
