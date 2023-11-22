@@ -13,7 +13,6 @@ namespace Joomla\Plugin\System\Wt_seo_meta_templates_phoca_gallery\Extension;
 // No direct access
 defined('_JEXEC') or die;
 
-use Joomla\CMS\Factory;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\MVC\Model\BaseDatabaseModel;
 use Joomla\CMS\Plugin\CMSPlugin;
